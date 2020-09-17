@@ -136,21 +136,21 @@ class BotonesPage extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            _crearBotonRedondeado( Colors.blue, Icons.border_all, 'General', context, 'qsomos' ),
+            _crearBotonRedondeado( Colors.blue, Icons.border_all, 'General', context, 'listadocliente' ),
             _crearBotonRedondeado( Colors.green, Icons.archive, 'Comprobantes', context, 'listado'),
             //_crearBotonRedondeado( Colors.purpleAccent, Icons.directions_bus, 'Comprobantes' ),
           ]
         ),
         TableRow(
           children: [
-            _crearBotonRedondeado( Colors.pinkAccent, Icons.shop, 'Quienes Somos' , context, 'ruta'),
+            _crearBotonRedondeado( Colors.pinkAccent, Icons.shop, 'Quienes Somos' , context, 'qsomos'),
             _crearBotonRedondeado( Colors.orange, Icons.insert_drive_file, 'Pagos Realizados', context, 'producto'),
           ]
         ),
         TableRow(
           children: [
             _crearBotonRedondeado( Colors.blueAccent, Icons.movie_filter, 'Entertaiment', context, 'ruta' ),
-            _crearBotonRedondeado( Colors.green, Icons.cloud, 'Grocery', context, 'ruta' ),
+            _crearBotonRedondeado( Colors.green, Icons.cloud, 'Grocery', context, 'registro' ),
           ]
         ),
         TableRow(

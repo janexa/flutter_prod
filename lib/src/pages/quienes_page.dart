@@ -18,6 +18,7 @@ class BasicoPage extends StatelessWidget {
             _crearImagen(context),
             _crearTitulo(),
             _crearAcciones(),
+            SizedBox( height: 15.0 ),
             _crearTexto(),
             //_crearTexto(),
           ],

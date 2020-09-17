@@ -3,9 +3,10 @@ import 'package:formvalidation/src/bloc/provider.dart';
 import 'package:formvalidation/src/models/producto_model.dart';
 
 import 'package:formvalidation/src/providers/productos_provider.dart';
+import 'package:formvalidation/src/utils/utils.dart' as utils;
 
 
-class ListadoFPage extends StatelessWidget {
+class ListadoClientePage extends StatelessWidget {
   
   final productosProvider = new ProductosProvider();
   
@@ -16,7 +17,7 @@ class ListadoFPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Comprobantes')
+        title: Text('Comprobantes x Cliente')
       ),
       body: _crearListado(),
       floatingActionButton: _crearBoton( context ),
@@ -59,20 +60,21 @@ class ListadoFPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
 
-            ( producto.fotoUrl == null ) 
-              ? Image(image: AssetImage('assets/no-image.png'))
-              : FadeInImage(
-                image: NetworkImage( producto.fotoUrl ),
-                placeholder: AssetImage('assets/jar-loading.gif'),
-                height: 300.0,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
+            // ( producto.fotoUrl == null ) 
+            //   ? Image(image: AssetImage('assets/no-image.png'))
+            //   : FadeInImage(
+            //     image: NetworkImage( producto.fotoUrl ),
+            //     placeholder: AssetImage('assets/jar-loading.gif'),
+            //     height: 300.0,
+            //     width: double.infinity,
+            //     fit: BoxFit.cover,
+            //   ),
             
             ListTile(
               title: Text('${ producto.titulo } - ${ producto.valor }'),
               subtitle: Text( producto.id ), 
-              onTap: () => Navigator.pushNamed(context, 'producto', arguments: producto ),
+              //onTap: () => Navigator.pushNamed(context, 'producto', arguments: producto ),
+              onTap: () => utils.abrirScan(context, producto),
             ),
           ],
         ),
